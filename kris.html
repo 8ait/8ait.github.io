@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поздравление для Кристины</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        padding-top: 100px;
+    }
+    #greeting {
+        font-size: 24px;
+        color: #333;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+<div id="greeting"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var testerGirlName = "Кристина";
+    var greeting = `Поздравляю тебя, ${testerGirlName}, с Днем Святого Валентина! 🌹💖`;
+    greeting += "Ты находишь каждую ошибку, словно находишь сокровище.";
+    greeting += "Я люблю тебя! ❤️";
+
+    var greetingElement = document.getElementById("greeting");
+    var index = 0;
+    var interval = setInterval(function() {
+        greetingElement.innerHTML += greeting[index++];
+        if (index === greeting.length) {
+            clearInterval(interval);
+        }
+    }, 50); // Задержка между выводом символов
+});
+</script>
+</body>
+</html>
